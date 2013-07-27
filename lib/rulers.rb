@@ -6,8 +6,12 @@ module Rulers
     def call(env)
       klass, act = get_controller_and_action(env)
       controller = klass.new(env)
-      text = controller.send(act)
-      [200, {'Content-Type' => 'text/html'}, [text]]
+      if (controller.class == Controller)
+        [302, {'Location' => '/quotes/a_quote'}, []]
+      else
+        text = controller.send(act)
+        [200, {'Content-Type' => 'text/html'}, [text]]
+      end
     end
   end
 
