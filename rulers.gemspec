@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ngpestelos@me.com"]
 
   spec.summary       = "A Rack-based Web Framework"
-  spec.description   = "A Rack-based Web Framework"
+  spec.description   = "A Rack-based Web Framework, but with extra awesome"
   spec.homepage      = "https://github.com/ngpestelos/rulers"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.4.0")
